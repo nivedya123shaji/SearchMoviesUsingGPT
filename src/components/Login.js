@@ -1,9 +1,19 @@
 import React, { useState } from 'react'
 import Header from './Header'
+import {checkValidData} from "../utils/valid.js"
 
 const Login = () => {
 
   const [isSignForm, setIsSignInForm]= useState(true);
+
+
+  const email=useRef(null);
+  const password=useRef(null);
+
+ const handleButtonClick=()=>{
+    //validate the form data
+    //checkValidData(email,password)
+ }
 
   const toggleSignInForm =()=>{
         setIsSignInForm(!isSignForm); 
@@ -24,9 +34,9 @@ const Login = () => {
 
           {!isSignForm && <input type='text' placeholder='Full Name' className='p-4 my-4 w-full bg-gray-700'/>}
         
-         <input type="text" placeholder='Email Address' className='p-4 my-4 w-full bg-gray-700'/>                 
-          <input type='password' placeholder='Password' className='p-4 my-4 w-full bg-gray-600'/>
-          <button className='p-4 my-6 bg-red-700 w-full rounded-lg '>{isSignForm ? "Sign In" : "Sign Up"}</button>
+         <input ref={email}   type="text" placeholder='Email Address' className='p-4 my-4 w-full bg-gray-700'/>                 
+          <input ref={password}  type='password' placeholder='Password' className='p-4 my-4 w-full bg-gray-600'/>
+          <button className='p-4 my-6 bg-red-700 w-full rounded-lg ' onClick={handleButtonClick}>{isSignForm ? "Sign In" : "Sign Up"}</button>
         <p className='py-4 cursor-pointer' onClick={toggleSignInForm}>{isSignForm ? "New to NetFlix? Sign Up Now" : "Already register? Sign In Now "}</p>
         </form>
 
