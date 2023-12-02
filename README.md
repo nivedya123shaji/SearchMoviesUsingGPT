@@ -8,6 +8,9 @@ Login form(challenge Convert same Login Form To Sign Up Form)
 Sign Up Form
 form validation
 useRef Hook
+FireBase Setup
+Deploying our App to Production
+Create SignUp user in FireBase
 
 # features
 -Login/Sign Up Page
