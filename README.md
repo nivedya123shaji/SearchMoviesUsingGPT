@@ -11,6 +11,8 @@ useRef Hook
 FireBase Setup
 Deploying our App to Production
 Create SignUp user in FireBase
+Implement Sigin User Account
+Created Redux Store with userSlice
 
 # features
 -Login/Sign Up Page
