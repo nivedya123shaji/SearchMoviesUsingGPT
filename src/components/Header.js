@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { auth } from "../utils/firebase";
+import { auth } from "../utils/fireBase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { onAuthStateChanged, signOut } from "firebase/auth";
